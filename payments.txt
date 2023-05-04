@@ -1,0 +1,163 @@
+Invoice No.: INV-2023-12345
+Purchase Order No.: PO-2023-67890
+Supplier Name: AcmeCo
+Payment Date: 2023-04-20
+Payment Method: ACH Transfer
+Payment Amount: $4,000.00
+Payment Terms: Net 30
+Days to Pay: 28
+Product/Service Description: 
+  - 100 units of Product A (SKU: ACME-001) @ $40.00/unit
+  - 50 units of Product B (SKU: ACME-002) @ $20.00/unit
+Shipping Damages Credit:
+  - 25 units of Product A (SKU: ACME-001) @ $40.00/unit
+  - Total Credit: $1,000.00
+Adjusted Payment Amount: $4,000.00
+Status: Paid
+*** *** *** *** ***
+Invoice No.: INV-2023-12346
+Purchase Order No.: PO-2023-67891
+Supplier Name: WidgetCorp
+Payment Date: 2023-04-22
+Payment Method: ACH Transfer
+Payment Amount: $3,500.00
+Payment Terms: Net 30
+Days to Pay: 29
+Product/Service Description:
+200 units of Product X (SKU: WIDGET-101) @ $15.00/unit
+50 units of Product Y (SKU: WIDGET-102) @ $20.00/unit
+Shipping Damages Credit:
+10 units of Product X (SKU: WIDGET-101) @ $15.00/unit
+Total Credit: $150.00
+Adjusted Payment Amount: $3,350.00
+Status: Paid
+*** *** *** *** ***
+Invoice No.: INV-2023-12347
+Purchase Order No.: PO-2023-67892
+Supplier Name: GadgetPro
+Payment Date: 2023-04-25
+Payment Method: ACH Transfer
+Payment Amount: $6,000.00
+Payment Terms: Net 30
+Days to Pay: 27
+Product/Service Description:
+100 units of Gadget M (SKU: GADGET-501) @ $50.00/unit
+20 units of Gadget N (SKU: GADGET-502) @ $100.00/unit
+Shipping Damages Credit:
+5 units of Gadget M (SKU: GADGET-501) @ $50.00/unit
+Total Credit: $250.00
+Adjusted Payment Amount: $5,750.00
+Status: Paid
+*** *** *** *** ***
+Invoice No.: INV-2023-12348
+Purchase Order No.: PO-2023-67893
+Supplier Name: TechSolutions
+Payment Date: 2023-04-27
+Payment Method: Wire Transfer
+Payment Amount: $8,000.00
+Payment Terms: Net 45
+Days to Pay: 42
+Product/Service Description:
+200 units of Device P (SKU: TECH-901) @ $35.00/unit
+20 units of Device Q (SKU: TECH-902) @ $75.00/unit
+Shipping Damages Credit:
+None
+Adjusted Payment Amount: $8,000.00
+Status: Paid
+*** *** *** *** ***
+Invoice No.: INV-2023-12349
+Purchase Order No.: PO-2023-67894
+Supplier Name: HousewareInc
+Payment Date: 2023-04-28
+Payment Method: ACH Transfer
+Payment Amount: $2,500.00
+Payment Terms: Net 30
+Days to Pay: 30
+Product/Service Description:
+100 units of Item K (SKU: HOUSE-301) @ $20.00/unit
+25 units of Item L (SKU: HOUSE-302) @ $40.00/unit
+Shipping Damages Credit:
+10 units of Item K (SKU: HOUSE-301) @ $20.00/unit
+Total Credit: $200.00
+Adjusted Payment Amount: $2,300.00
+Status: Paid
+*** *** *** *** ***
+Invoice No.: INV-2023-12350
+Purchase Order No.: PO-2023-67895
+Supplier Name: GreenEco
+Payment Date: 2023-04-30
+Payment Method: ACH Transfer
+Payment Amount: $5,000.00
+Payment Terms: Net 45
+Days to Pay: 45
+Product/Service Description:
+250 units of Eco Product R (SKU: GREEN-801) @ $20.00/unit
+Shipping Damages Credit:
+None
+Adjusted Payment Amount: $5,000.00
+Status: Paid
+*** *** *** *** ***
+Invoice No.: INV-2023-12351
+Purchase Order No.: PO-2023-67896
+Supplier Name: OfficeGoods
+Payment Date: 2023-04-23
+Payment Method: ACH Transfer
+Payment Amount: $1,500.00
+Payment Terms: Net 15
+Days to Pay: 15
+Product/Service Description:
+300 units of Pen Set (SKU: OFFICE-101) @ $5.00/unit
+Shipping Damages Credit:
+None
+Adjusted Payment Amount: $1,500.00
+Status: Paid
+*** *** *** *** ***
+Invoice No.: INV-2023-12352
+Purchase Order No.: PO-2023-67897
+Supplier Name: FashionRetail
+Payment Date: 2023-05-01
+Payment Method: ACH Transfer
+Payment Amount: $7,000.00
+Payment Terms: Net 30
+Days to Pay: 30
+Product/Service Description:
+50 units of Designer Shirt (SKU: FASHION-401) @ $100.00/unit
+20 units of Designer Pants (SKU: FASHION-402) @ $150.00/unit
+Shipping Damages Credit:
+5 units of Designer Shirt (SKU: FASHION-401) @ $100.00/unit
+Total Credit: $500.00
+Adjusted Payment Amount: $6,500.00
+Status: Paid
+*** *** *** *** ***
+Invoice No.: INV-2023-12353
+Purchase Order No.: PO-2023-67898
+Supplier Name: AutoPartsPlus
+Payment Date: 2023-05-02
+Payment Method: Wire Transfer
+Payment Amount: $10,000.00
+Payment Terms: Net 60
+Days to Pay: 59
+Product/Service Description:
+100 units of Car Battery (SKU: AUTO-601) @ $100.00/unit
+Shipping Damages Credit:
+None
+Adjusted Payment Amount: $10,000.00
+Status: Paid
+*** *** *** *** ***
+Invoice No.: INV-2023-12354
+Purchase Order No.: PO-2023-67899
+Supplier Name: SportsGearCo
+Payment Date: 2023-05-04
+Payment Method: ACH Transfer
+Payment Amount: $4,500.00
+Payment Terms: Net 30
+Days to Pay: 28
+Product/Service Description:
+100 units of Soccer Ball (SKU: SPORTS-201) @ $30.00/unit
+50 units of Basketball (SKU: SPORTS-202) @ $20.00/unit
+Shipping Damages Credit:
+5 units of Soccer Ball (SKU: SPORTS-201) @ $30.00/unit
+Total Credit: $150.00
+Adjusted Payment Amount: $4,350.00
+Status: Paid
+*** *** *** *** ***

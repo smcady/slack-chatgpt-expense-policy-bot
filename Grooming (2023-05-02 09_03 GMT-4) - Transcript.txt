@@ -1,0 +1,258 @@
+﻿Grooming Transcript
+Attendees
+Alex Masalov, Andrii Siuta, Den Morgunov, Dmitry Derepovskyi, Filipe Oshiro, Ludmila Nesvitiy, Nickita Mykhailneko, Shawn Cady, Shawn Cady's Presentation, Shawn's Meetgeek Notetaker
+Transcript
+This editable transcript was computer generated and might contain errors. People can also change the text after it was created.
+Shawn Cady: All right. Okay, let's, let's jump right in here. So first thing is Loading animations. So
+Shawn Cady:  this was something that We missed in the rebrand, there are several places in the application where we've got these kind of loading animations. I think each of the buttons is constructed in a way that if
+Shawn Cady:  The There's like a short delay and if the button actions you know the state of the button has an updated after a timer event fires, then a little loading mess, a image appears. So and then also on page load or section load, you know, throughout the application. So there's two different loading animations. There's kind of the small icon loading animation that that is on the buttons and then there is like a full screen page load animation as well. Both of those are in this loaders. Zip file here attached to the tickets so you can certainly take a look at that. I'm happy to open. Let's just open that right now. Real quick. Show you what's in there. So we have the button loader.
+Shawn Cady:  Oh, you're not seeing the button, I guess there. Well done, anyway, it's in there. I promise you and that out here to use the SVG Oh s***, it won't it won't play well an SPG, animation. Not play. I don't know.
+Shawn Cady:  But that's in there. I've seen them, they're actually a nurse where I promise. and then, there is also the main loader. Oh, because it's local. That's why, because I'm in the zip file, that's what it is because I didn't extract it. So you guys understand, you know, what's going on extract? All extract?
+Shawn Cady:  Windows is trying to be helpful, but it's not that helpful. Here we go. Now we say button HTML there. They are Tada. Fancy fancy. And then
+Shawn Cady: This one main loader is this one. Oh, fancier. Look at this. Amazing amazing.
+Andrii Siuta: Amazing. That's amazing.
+Shawn Cady: All right, so those are the two loaders, guys.
+Shawn Cady:  Any questions about this? We have two, those two scenarios files are all attached. Any other questions Are you guys good to grooming this?
+Shawn Cady:  Okay. Go ahead and see.
+Ludmila Nesvitiy: Good.
+Andrii Siuta: We can room it. Yeah, looks it's fantastic.
+Shawn Cady:  Hey, excellent. Excellent. All right. We'll save that Deb grooming and move on to the next one integrate sendgrid templates into Azure Pipeline. This is a
+Shawn Cady:  I don't know what the hell this ticket is honestly, let's look at this problem, Deb, should manually update templates on each environment. Technical notes, We have a folder with Sendgrid templates in the solution, on each deployment, We should update the templates on the sendgrid side. Okay, so well, someone maybe demon. Did you create this? So that this doesn't have to be done manually each time or did Alex do it? Yeah.
+Dmitry Derepovskyi: Yeah, yeah. So we manually copy. Then play it from one environment, and put it to another one.
+Shawn Cady: Okay. Gotcha,…
+Dmitry Derepovskyi: It should be marked like they're grooming and…
+Shawn Cady: gotcha. All right.
+Dmitry Derepovskyi: instead of right?
+Shawn Cady: Yeah. Deb grooming ready?
+Dmitry Derepovskyi: Yeah, yeah sorry.
+Shawn Cady: Okay, cool. Save. All right, good morning, Alex. Sleepyhead, how are you today?
+Alex Masalov: Good morning. Sorry guys, it's fine. You
+Shawn Cady:  Poor Alex's. Like he doesn't know what time it is.
+Shawn Cady:  No, no worries, man. No worries search filters. All right. What the hell is this? No, no, no, we can't do these. Why are these here? These should not be here. You should not be here. Nope. Nope. Strange.
+Shawn Cady:  What the hell are these? Why are these showing here? I don't know what's going on there, guys. Sorry, I gotta figure that out. Um, all right, update the application to send emails from alerts at Clover Collab.com. So, every email in the application has to be be has to be sent from that email address. I'm sorry that I o not calm. Sorry. Oh God, glad I saw that. I would have screwed us up. So Clover Club Dot io. All right. So
+00:05:00
+Shawn Cady:  I'm gonna find every location. Any questions about that guys? Okay.
+Shawn Cady:  If grooming. All right. Next one is easy, easy.
+Shawn Cady:  Update the GAA tracking code and prod. So that we Of the new property connected. Any questions? No.
+Ludmila Nesvitiy: We had the same ticket in the current sprint. I tested. It, it was updated and that's the code change it
+Shawn Cady:  Oh look. Look, must have worked on a while. It was still in a who it is marked with. All right? Maybe that's what's going on. Maybe my query is messed up.
+Dmitry Derepovskyi: It's because I say that we have the same ticket and Ludmila say that he will test it. So, It's yeah, it's currently now in current sprint. So if we use the same so we can close it. Result. Oh,
+Ludmila Nesvitiy:  Yeah, if the code is the same just close it, it's
+Shawn Cady: Idea. I think this is the one that's in the current sprint.
+Ludmila Nesvitiy: Oh yeah,…
+Shawn Cady: Is it not?
+Dmitry Derepovskyi: Yeah. Yeah.
+Shawn Cady: Yeah. Yeah,…
+Ludmila Nesvitiy: it's resolved. I'm done.
+Shawn Cady: so I don't know why it's showing on this board. Yeah. All right,…
+Dmitry Derepovskyi: Already on production.
+Ludmila Nesvitiy:  Yeah.
+Shawn Cady: let's see. Work item type not in task and State, not in removed, and tags contains ready to groom.
+Shawn Cady:  Sure, looks right. Doesn't it? Let's see though. Queries. All.
+Shawn Cady:  Did it dab grooming? No ready to groom.
+Shawn Cady:  It's not right. Son of a son of a. There is more guys I promise I just don't know where the hell it is. Um,
+Shawn Cady:  oh, All right. I should be ready for my own damn meetings on Shawn.
+Shawn Cady:  I know, I know, I know. Let's see. What can we do? Oh, I know we do. Let's talk about this.
+Shawn Cady:  All right. So then then we'll be able to answer some questions here as well. So I'd ask Dan to, you know, and in this conversation that we've been having where where we're kind of running into this wall, that everyone feels where we're trying to figure out, you know, more details on how things are going to work. So that then can kind of
+Shawn Cady:  Form his metal model and commit to a direction from a design perspective. At the same time, we're trying to figure out how to keep everyone moving. It's that dynamic and I went to Denza Den, what can we do? And then said, Oh, we can, We can start to replace some of the library components or I'm sorry. The site components with the new redesigned components from the ridazon library. So I said Great, let's do that. And then hand it over this to start us on button migration. So this is a very quick and easy migration to the new buttons from the new site design. So there are a bunch of different buttons out there in production. Now, that would be classified as primary, right? There's these 38 pixel tall ones and the 48 pixel tall ones and then there's some secondaries in different slight.
+Shawn Cady:  A different variance out there and then there's this outlined variant as well. Instead we're going to move to a forty eight variant and a I'm sorry a 40 pixel variant as the large and a 38 pixel variant as the smaller button in the primary, right? And then this is the hubbers state and then this is the I think this is the What is it primary large? Where is it?
+Den Morgunov: It's first. Press State.
+Shawn Cady:  Suppressed state. I just where do you, how do you have that label then where do I see that? Oh, here it is. State press. Gotcha. Gotcha. Okay. And then this is disabled over on the right, so so enabled hover. Pressed disabled, right, I'm left. Right? And then these would be the secondaries right then.
+00:10:00
+Shawn Cady: Same thing.
+Den Morgunov: Yep.
+Shawn Cady: Big and small individual states. And then these would be What den? What were these used?
+Den Morgunov: It's for the interactions like delete something.
+Shawn Cady:  Okay, right, right. Gotcha. Okay.
+Den Morgunov:  We don't have the knowledge application, but you might need to
+Shawn Cady:  Yeah. I think we actually do in one place, guys. Don't we have a Delete confirmation where you have to type the value to actually confirm the deletion somewhere in like Admin.
+Ludmila Nesvitiy: Yes, we have to remove team.
+Shawn Cady: To remove a team that's it. So then if yeah, if we remove a team We present a dialogue, you know, a modal that basically requires that they, you know, they type a, the team name or something like that to actually confirm the delete and then there's that danger button. So guys, you'll need to look for that as well. Um, there was probably never a component actually made for that, not that there are a lot of components in our current world. But all right then. So this I was going to contact you about separately today. I wasn't sure what we were. What you were saying here? Can you walk us through this?
+Den Morgunov: Regarding this icon button.
+Shawn Cady: Yeah. Like, what, what was your intent here?
+Den Morgunov: Yeah, as you can see, we have a bunch of different variants. And yep.
+Shawn Cady:  Yep.
+Den Morgunov: So and they're all in different contexts and some of them I believe from like third-party solution. So probably we can leave them as easy and Use this new component only, when we implement new design, like in the navigation, we already using these component.
+Shawn Cady:  Hmm. Okay. so, as an example,
+Shawn Cady:  I'm sorry. Go ahead. Go ahead, Andre.
+Andrii Siuta: I am just wondering that. Those projects, I praise the same design and we have a ready solution for those components. So, the right side, the This this in progress, this all buttons with a drop-down or never mind, we can use the ready solution. Right. Maybe I will share with you Shawn after the meeting the design system and you can save me a feedback. What do you think about it?
+Shawn Cady:  Andrea, I'm not sure. I'm following so. What do you mean with?
+Andrii Siuta: All of these right side buttons. That items below are still working in progress. All of this button is designed by other developers and…
+Shawn Cady: Up. Okay.
+Andrii Siuta: can be used in our system. It's free.
+Shawn Cady:  Okay.
+Andrii Siuta:  And you can observe it and just or I will share with you and with that. Ads will be perfect.
+Den Morgunov: Before we start working on the project, we also think about using some like tailwind CSS for that, but we decided to have a custom design system…
+Andrii Siuta: yeah, I understand…
+Den Morgunov: because when you use
+Andrii Siuta: but this custom it's like Similar, as I mean, it's not about the styles, it's about over overall, looking to speed up. You really appreciate those after.
+Den Morgunov: It's not good because you can just reuse the component,…
+Andrii Siuta: I will send you.
+Den Morgunov: but On my side in Figma, I still need to create all of that. And I need to obey this. Template that we might have. So interesting on my side. So that's why we decided to go fully custom
+Andrii Siuta: Yeah, but don't worry we will integrate your also don't worry about the sizes or something like this, you will not like be in narrow field. No worries about it.
+Shawn Cady:  All right. Well, I want to make sure we're all really, really clear about how we're moving. We're moving forward here and not right now. I'm very confused. So
+Shawn Cady:  so, Den has been tasked with just make sure we're all in the same page. Dan has been tasked with and web folks. The the company that then works for has been tasked with building, a, A redesigning, the applications user experience from top to bottom, Of course, additionally, we just did the rebrand so there was the complexity of doing the rebrand while we're reworking. The component library for the system.
+00:15:00
+Shawn Cady:  But one of Dan's outputs is to be a component library of all of the components in the design system for clover. So that when we are mocking things and building things later on, we can do so with those components and, and of course, leverage, you know, take advantage of all of the benefits that having a component library. Provide, you, you know, this, this referential update capability. So, so Dan is in the middle of that, that work right now and he's kind of doing some of that work while he's doing the other, you know, was doing the redesign work and, and is now doing the conversations work as well. So, he's kind of both of these things in his head at the same time. So,
+Shawn Cady:  In the application today as, as, you know, Andre we have some new components from the new library and or, you know, the new design system and we have those components sharing space on the screen with old designs, right? I wouldn't even say components, but let's go on components old components of the old design. The way that we have envisioned and planned on moving forward. And moving through, this is that
+Shawn Cady:  We are going to start to replace old components of the old design with the new components of Den's new design. And this is the first example of of that, well, kind of the second we've already done, the nav in the top bar in the search field, etc. So, Andre, now, all of that was just kind of like background in context. So can can you now, say again, What what you were describing, Audrey, so that I'm a little bit more clear about what it is.
+Andrii Siuta: Oh sure sure. We'll follow the dance design, that's no no questions to it…
+Shawn Cady:  Yeah. Yeah.
+Andrii Siuta: but also I work with library that have like very close like styles and all we need. Oh, all we need to attach like that sizes. And sizes styles, but the functionality will be ready. For example, if you have button with a drop down it will help us and…
+Shawn Cady:  I see, okay. Right.
+Andrii Siuta: don't like overthink our work. Yeah, we totally follow the designs and…
+Shawn Cady: Yeah. Yeah, sure. Sure. You're saying. Right? If it's typical interaction,…
+Andrii Siuta: then that's
+Shawn Cady: like a drop-down button, you know Drop Down menu on a button, is a very typical interaction. Then then you're saying the implementation that you guys have today. Already has a that capability but you can still customize the elements, the UX elements of that capability. To match.
+Andrii Siuta: Yeah, yeah. Totally
+Shawn Cady: Den's design. Okay. Yeah. Then then you agree, we're fine, right? That that I was concerned as well. The way I heard that the first time but now are you still concerned? Are you you? Okay?
+Den Morgunov: so, I really can change anything that I want. The UI is under my control and…
+Shawn Cady: Yep. That's right.
+Den Morgunov: it's only helping you on that side,…
+Andrii Siuta: Yes, yes. Yes, yes. Yes.
+Den Morgunov: like functional device. Okay. Yeah.
+Shawn Cady:  That's right. Yep, cool.
+Den Morgunov: When the misunderstood you. Know.
+Shawn Cady:  Yeah, I I did is what I did as well. I'm glad we took a moment to clear that up. Thank you Andre, thanks den. Alright guys, cool. So So, just just, let's get back to these buttons. So, um, den like you were saying, You know, there's loads of these buttons in there. Some of these buttons are are probably attached to third party, vendor controls that are embedded in the system and maybe we don't even have the ability to really control them and update them. So, rather than go through the whole system and try and update everyone, you're saying, as we go through screen by screen, I don't know you saying later we'll do them. Well what is What's your plan there?
+Den Morgunov: Yeah, exactly. If we update some component that contains this type of buttons, we're going to replace them with new one.
+Shawn Cady: I see. Okay, okay got it, got it. So if we yeah, so when we work on the grade component, the Grid control as an example, this is that Grid. Switcher will address it as part of the grid control. Got it.
+Den Morgunov:  Yeah.
+Shawn Cady: Okay, Cool makes sense.
+Shawn Cady:  Andrey and filipe you guys are okay with that too.
+Filipe Oshiro: Yeah, all good.
+Shawn Cady: All right, excellent. Um,
+00:20:00
+Ludmila Nesvitiy: The great question related to the buttons. I remember in the application which I was strange button with top arrow. In the task response. So we will implement it just changing the arrows or
+Ludmila Nesvitiy:  some custom one.
+Shawn Cady:  So, I The top arrow. Oh, you mean? Yeah, you're talking about the the menu fly out is is above instead of below. So the arrow point instead of down.
+Ludmila Nesvitiy: Something like that. Yeah, just to reassign a task.
+Shawn Cady: Yeah.
+Ludmila Nesvitiy: No, no,…
+Shawn Cady: Yeah.
+Ludmila Nesvitiy: that's present and save for later.
+Shawn Cady: Yeah, reassign and save for later. Drop down on the next button. Yeah, yeah, exactly. So
+Den Morgunov: Oh, I am only jets in your button for that case. It should be slightly different.
+Shawn Cady: Okay. Okay cool. So and we'll address that when we when we work on that screen anyway, so yeah, okay, cool. All right, good deals. So this this kind of rap but not I understand that this basically would allow me.
+Den Morgunov: That's justification. You might not be good.
+Shawn Cady: What's that?
+Den Morgunov: That's just for the future, maybe we don't need that right now.
+Shawn Cady:  Okay. Okay. Yeah cuz that that's I I think I get it but I don't know. I don't know what. Yeah, where would be used right now and I guess we'll we'll wait for you to tell us where this would need to be implemented, right? Okay. All right. Cool. Um den, are there any is there anything? And I didn't ask you. I'm not trying to be unfair here. So to be fair, I didn't ask you this before this meeting right now. So if the answer's, no, it's not a problem. But is there anything else from the component library that you feel like we could start to feed it?
+Den Morgunov: Yeah, on the left, you can see pages and there a few of them like, selectors input, navigation, all that. With check more.
+Shawn Cady: Navigation Input menu. Right? There we go. Cool. So each of these basically we can go we can start to go through, right? Okay,…
+Den Morgunov:  Yeah.
+Shawn Cady: excellent. All right. So
+Shawn Cady:  The sub nav. Okay.
+Den Morgunov:  And this part, I'm not sure that you can start working so that's why it's not
+Shawn Cady:  Okay, so I'll I'll start with selectors, we'll do selectors buttons input menu. Loading and notifications. All right.
+Den Morgunov: A notifications are empty for now.
+Filipe Oshiro: but,
+Den Morgunov: That's just those with…
+Shawn Cady:  Okay. All right.
+Den Morgunov: what you can. Start.
+Shawn Cady:  Right. All right, guys. So
+Shawn Cady: Basically, we, well, I'll write the tickets up for these. I haven't even started the tickets on these. You know, this is happening like real time. But we're gonna migrate all of these checkboxes and this toggle control to the new checkboxes and the new toggle control and radio buttons as well, right? I don't think stripe docs as Behavior example. Okay, that's cool then. So you linked to some of these to show an example of the interaction. um, cool. All right. The deal.
+Shawn Cady:  and then, all right, so Den is all so because he is very detailed oriented which I love, but he is trying to do his best for us in keeping track of the changes that may take place to any of these From now, kind of going forward, right? So that we don't get out of sync because it's gonna be important that of course any decisions that impact. Any of these, we come back and make those changes in production as well and have them updated everywhere that they've been implemented. So Den's gonna do is best to try and keep track of these in a change log on each one of these figma pages. All right, All right, buttons. We've already touched. We can talk about inputs now. so,
+Shawn Cady:  Obviously text fields we have today. Examples of disabled text fields. We have today. All different sizes. Take your pick, how many different sizes of, what kind I got every kind of disabled text field. You could need, which one do you want? One day, one day, only discount, here we go, Um text box so an editable text box and on Editable text box.
+00:25:00
+Den Morgunov: That's the card. Yeah, I just got refile.
+Shawn Cady:  I'm sorry.
+Shawn Cady:  Oh, so that this is exit. This is existing gotcha. Okay. All right. Good. So these are our current text box controls current. Single select Dropdowns. Current Multi-select dropdowns.
+Shawn Cady:  This is the version of each of the others. So, label drop down label. Drop down with the placeholder label with another placeholder.
+Den Morgunov:  As a list of the text field, single select and texture. and on the right, just components. Efficient consists.
+Shawn Cady: It's I'm sorry Dan, I didn't understand that, say it again.
+Den Morgunov: Let me in Sigma, right? So these are the main components. Next field,…
+Shawn Cady:  Uh-huh.
+Den Morgunov: select and texture. And that's just the parts The company.
+Shawn Cady:  Oh, subcomponents. I see. Gotcha. Yeah, yeah, makes sense. Got it?
+Den Morgunov:  And what icons that I used. like for the password show, Symbols Height, Symbols Clear, Input, Date Selector Or that is here.
+Shawn Cady:  Right. So then like on as an example on
+Den Morgunov:  And also what you would recommend to just copy the component.
+Shawn Cady:  Right.
+Den Morgunov:  I'm not sure they have. Rights to edit this file.
+Shawn Cady: I don't, I do not know.
+Den Morgunov:  That's bad because you can change. States.
+Shawn Cady:  Oh, you can change the states. Gotcha.
+Den Morgunov:  Focused. Icon. so,
+Shawn Cady:  Okay. Yep.
+Shawn Cady:  Okay. And yeah. So then can you just give us rights to or put these all in and editable? You know, in another doc whatever you however you want to do it?
+Den Morgunov:  And you to ask Mike because he's an admin on this file.
+Shawn Cady: Okay, got you. All right. Okay, so
+Shawn Cady: If so I'm I've got a right specs on on these changes, guys. So how how do you what do you need from me? Um, from a ticket perspective and a spec perspective to start to make some of these changes, like the buttons, obviously. Those those are kind of easy, right? I can write us a ticket very quickly that says Anywhere. There's a primary button whose height is 48 pixels replace it with this one anywhere there's a primary button inside is whatever replace with this…
+Filipe Oshiro: Start.
+Shawn Cady: but this is a lot more difficult, right? Like this is more like you know there's a there's a hundred different variants and and 20 different trolls. How on I'm asking primarily andrey and filipe.
+Shawn Cady:  How should we best move through, replacing, all of this stuff in the application so that I can be as descriptive as you need me to be without wasting time, writing specs that are unnecessary.
+Andrii Siuta: You might not write any specs, should be not a problem.
+Shawn Cady:  Well that well I like that a lot, but that's gonna make it very difficult for Alex to track. Um, you know, work and completion, and you know, etc, but you know, we'll create tickets, of course, but so that we can do those things Audrey. But are you guys saying that I should just like, is it best to create a group of tickets for each type of control? Or is it best to just create one ticket? Like, you know what I'm saying? What, how best should be structure? The work.
+Andrii Siuta: I understand what the resulting about. We can create one like our parent and a lot of Childs, I guess if in that way,…
+Filipe Oshiro: Yeah.
+Andrii Siuta: for example, if you have like type of this time because it will be easy to test because I guess after I will replace, I will road in the ticket, the place where I change to prevent some problem for Ludmila maybe.
+Shawn Cady: Yeah. Yeah. Okay, Ludmila. I I don't know from a testing side. Do you do? We currently run tests that validate the UX states of these controls. We don't right like Or do we?
+00:30:00
+Ludmila Nesvitiy: From it depends, it depends on the item, which we test. For example,…
+Shawn Cady:  Okay.
+Ludmila Nesvitiy: bottom states, We don't check, but states for some selectors checkboxes and you…
+Shawn Cady:  Yeah.
+Ludmila Nesvitiy: even in some buttons. Some buttons should have disabled states, disabled status,…
+Shawn Cady:  Yeah.
+Ludmila Nesvitiy: pretty important. You know, so basically it's more yes and no.
+Shawn Cady:  Okay. Okay, all right. Well, that's good, that's great. Um actually
+Shawn Cady: All right, I've got to think some about how we structure this. From a ticket for I guess I know what I'm doing the rest of the day. That's right. But I I appreciate your point Andre and Filipe like you know let's not spend a load of time writing. Very detailed specs about this. Let's figure out a way to to document it at a high level. But it needs to be sufficient for Ludmila to be able to accurately test it obviously that's that's very important.
+Filipe Oshiro: Yeah.
+Ludmila Nesvitiy: Yeah, exactly. So one ticket. It's not like,…
+Shawn Cady:  Yeah. Yeah.
+Ludmila Nesvitiy: not so good. You know, the tickets should be estimated correctly should be tested correctly, so it should be not super small, but not also, super big thing. We just need to combine some components into one tickets. That's my
+Dmitry Derepovskyi: If we are going to it only one ticket for this one, then we should select some, you know, pages and say, or only on this page, we will update this components then it's okay. But if we are going to update For all systems like buttons and it should be the separate ticket. Like we update buttons. It shouldn't be so many information,…
+Shawn Cady: Yeah.
+Dmitry Derepovskyi: I think because it's hard to describe and we wouldn't be able to get this by text.
+Shawn Cady: Yeah. So Philippian and…
+Dmitry Derepovskyi: You say like,
+Shawn Cady: Andrea. Do you think it's, it's kind of feature by feature or or screen by screen that that we should do? The do the work?
+Andrii Siuta: I guess, I guess a wages, maybe I will agree with like this features but not not.
+Dmitry Derepovskyi: No, no pages. It's only for, so it's only for like, you know, one page. We're implement this components, but then we should like Create some big steel. We should create some one feature when we apply all this style for buttons.
+Shawn Cady: Yeah, I know,…
+Dmitry Derepovskyi: For example.
+Shawn Cady: I understand, I understand. Yep. Yep. Okay. Um, all right. Well, I will, I will assemble a ticket to the best of my ability there and then I'll call us together and we can, we can review it. Um, and and go go from there. But this this should be Once we once we get through menu items and then we already talked about the loader, this morning, this will be a significant chunk of the application honestly. Just getting these changes done. All right, so drop down menu, current versions of that that we've seen the application. And then, then I'll let you Talk us through it if you if you can.
+Den Morgunov: I mean this pretty simple here. Just this is Master component. That's why it looks like this with a lot of elements. Here you can check states. So this is just racing state, our state per state. And some additional elements that you might have. In the Drop Down menu. Level Title divider and some additional text. There is not clickable And here's some examples.
+Shawn Cady:  Got it.
+Shawn Cady:  Cool, cool. All right. No questions, Andre Filipe.
+Shawn Cady: All right, good deal. All right, guys. Um, There is alright, so I've got, I've got to figure out two things. My apologies for not being ready to this morning, especially after being a dick and saying, Everyone needs to be ready, but my my morning the rest of my morning,…
+Filipe Oshiro: but,
+Shawn Cady: I'll be working on these tickets to try and get them to a ready for Dad, ready for grooming state. And then I've got to figure out where the heck, my other tickets are That I have ready for grooming and I will organize them into a list so that we can grooming them again tomorrow. Lucky boys and girls We get to do another grooming, but we're gonna continue doing this for a while. To make sure we have enough of a cushion and backlog and that everyone understands the direction we're heading in, it's gonna speed us up. Ultimately
+00:35:00
+Shawn Cady:  All right, let's see, questions questions. So, one of the things I promised us, we weren't going to talk too much about conversations. But tomorrow, I do want to talk about um, some task assignment use cases specifically there's this idea of I think, Kind of a new role that we need to consider, which is this idea of a, and it's really not something that we don't kind of have today. We just don't address them in the same way that I think maybe we should. So, today, we have an assigner, right, our company, right? Like a company writer. What is the name of the role? Is a company writer. I think it might be
+Shawn Cady: Company assigned or…
+Dmitry Derepovskyi: Don't know. Such we have company,…
+Shawn Cady: something like that, and come.
+Dmitry Derepovskyi: viewer company. User and Company Admin.
+Shawn Cady:  Come use their company user. That that's the one I'm just looking for Thank you demon. So, but in the future, I think we have an opportunity to address. A class of users.
+Shawn Cady:  By me being more specific about them, you know, that class of users themselves being the team assigners. So, in other words when when you are an assigner today, kind of the assumption that we always had was you just working individually to a sign out tickets? And we didn't really when we were envisioning, the platform early on envision and a signer working as part of a team of other people who are assigning tasks of a similar type in a similar. And on the same set of workflows, right? And that's how teams are organized today in the application Team. A has access to where does not have access to workflows one, two, three and four. And then because of the workflows that that team has access to that, then drives the task visibility, that those team members have
+Shawn Cady:  That. Visibility model is going to. Obviously be impacted by the decisions that we're making in conversations, and who can see what conversation if a task is now a conversation then and it's ask already has its own visibility model, on the, on the assign her side. How does that get affected?
+Shawn Cady:  In conversations. Right? And then again to kind of bring it back to where I started, this idea of a role of a task assigner who's actually operating on a team of other task assigners. I think there are some features that we will want to potentially gear directly towards a signers who are working in a team of other assigners. Things like think team dashboards that are you know, specific to all of the users and the assigners who are on that team.
+Shawn Cady:  Versus someone who is an assigner, at an organization that and isn't on a team, isn't operating on a team. In, In some way, those are different experiences and they're gonna have probably different needs. So, there's the potential that we might introduce a new role called, You know, whatever it's called. But describing a team task, assigner task is on our operating on a team, and we might end up having specific use cases for that new role as opposed to a company, whatever the hell it was company user. All right.
+Shawn Cady:  All right, that's it. I'm gonna leave it there guys. I'm not gonna drown anyone with more meetings today and if there are no questions, we will pick it up tomorrow and I will circulate notes, or I'll take. So what I'm being what I've been doing. Every day is taking our notes from these conversations and going back and updating the document with those notes. So I'll do that again. Today, this stock will continue to be kind of a running dialogue of anything. We've talked about relative to conversations until we start building tickets, all right. Alright guys. Have a good look at this. This is so so fun. I have nine boxes now on my
+00:40:00
+Shawn Cady:  On my, my meeting, my, my meet meeting. And what do you call them? Meats, meats? I don't know. Whatever the hell they are. My meeting. My web meeting. I've nine boxes now with a little faces in them and I remember when there were only a couple, so it's cool. Got lots of faces. Alright guys, have a good day, Alex.
+Alex Masalov: But yeah, I have a question regarding this role so what this? Or we can discuss it more than you, right specs, because I'm just going to understand.
+Shawn Cady: Yeah, yeah, well and exactly and I'm not even convinced we're gonna have one yet. Alex. I just wanted to share that thought I started to think about last night things like Team reporting like, you know how how a team is doing how many team members are doing better than other team members that kind of stuff and and it leads me down this path of like a team task a center role but I'm not convinced of it yet and we'll talk about it more for sure. I just wanted to share the thought Okay.
+Dmitry Derepovskyi: yeah, I may be put some small comments,…
+Alex Masalov: Right.
+Dmitry Derepovskyi: maybe we need to think that The user can have several roles, not only one because now you have some task assigners,…
+Shawn Cady:  Yeah.
+Dmitry Derepovskyi: then it could be some report manager and etc, and it would be much easier either with several roles. It's, like permissions or…
+Shawn Cady: You know.
+Dmitry Derepovskyi: you can work on this or
+Shawn Cady: Yeah, that's a good point. Yep. Yep. It's a good point. Yeah. To organize the roles differently and allow there to be more than one. Yeah. Cool. All right. Well definitely. Good.
+Alex Masalov: Yeah. what one of the what you can also think about this managing like members of the conversation who can like remove members and so on, because when we will have different types of conversations like tasks and we discussed, we were going to include all like apartments member when task is assigned to department in the,…
+Shawn Cady:  Right.
+Alex Masalov: when it's real assigned to Have like you members. Which we assigned to, and we need to have some person who can like exclude, some use some members from, from the conversation when it's needed, who will be this person?
+Shawn Cady: Mmm. Yeah like yeah that there's definitely like a team admin role for sure that I thought of,…
+Alex Masalov: It's not clear. No.
+Shawn Cady: you know, so far but I think that's what you're describing. But yeah, I mean that we that we definitely need to dig into that for sure.
+Shawn Cady:  All right guys, cool. Thanks everyone for a morning full of meetings, and for another successful sprint, looking forward to getting kicked off on some of this UX stuff. And start time, you know, I look at at the app now and I hate it, the UX of the app. And, and honestly, that's, that's just, that's, that's a testament to how good Dan, and, and Mike, and his team are at what they're building. I think it's so much nicer from a UX perspective that I just want to hurry up and get it. Get it, get it in there, I feel like ours looks old and beat up now, but it's cool to see it growing like that. So, Excited about it. Cool stuff. Alright guys, Thanks everyone. Have a great day.
+Alex Masalov: Thank you.
+Dmitry Derepovskyi: Nice.
+Filipe Oshiro: Guys.
+Ludmila Nesvitiy: Have a good.
+Nickita Mykhailneko: Bye.
+Shawn Cady: My mind.
+Meeting ended after 00:43:47 👋

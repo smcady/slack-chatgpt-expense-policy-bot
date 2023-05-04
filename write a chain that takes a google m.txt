@@ -1,0 +1,5 @@
+write a chain that takes a google meeting transcript and summarizes it.  use a few shot, to prompt the format (attendees at top, date, time, meeting title, following by a summary then a bullet of relevant points in the meeting, action items?
+
+
+
+https://smcady-psychic-space-enigma-vg6pg7q555hxg54-9000.preview.app.github.dev/

@@ -1,0 +1,16 @@
+Invoice No.: INV-2023-12345
+Purchase Order No.: PO-2023-67890
+Supplier Name: AcmeCo
+Payment Date: 2023-04-20
+Payment Method: ACH Transfer
+Payment Amount: $4,000.00
+Payment Terms: Net 30
+Days to Pay: 28
+Product/Service Description: 
+  - 100 units of Product A (SKU: ACME-001) @ $40.00/unit
+  - 50 units of Product B (SKU: ACME-002) @ $20.00/unit
+Shipping Damages Credit:
+  - 25 units of Product A (SKU: ACME-001) @ $40.00/unit
+  - Total Credit: $1,000.00
+Adjusted Payment Amount: $4,000.00
+Status: Paid

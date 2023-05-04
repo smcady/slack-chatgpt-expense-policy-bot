@@ -1,0 +1,26 @@
+DateTime,Event,Detail
+4/2/2023 9:02:31,Email Message, Received,AcmeCo Supplier Representative: Hello, this is Alex from AcmeCo. I hope you're doing well today. I was hoping you could help me with an issue we've been encountering with a recent shipment of products.
+4/3/2023 9:14:10,Email Message Sent,RetailCo Retailer Representative: Hi Alex, this is Emma from RetailCo. I'm sorry to hear that you're having issues with a shipment. What seems to be the problem?
+4/3/2023 10:43:10,Email Message Received,AcmeCo Supplier Representative: Thanks for your prompt response, Emma. It appears that several cases of our products were damaged during transit and we've received complaints from customers about receiving damaged items. We want to ensure customer satisfaction so we're looking to understand how this happened and how we can prevent it in the future.
+4/3/2023 12:34:10,Email Message Sent,RetailCo Retailer Representative: I understand your concern, Alex. We definitely want to maintain a high level of customer satisfaction as well. So we can collect the information needed for us to research I'll send you a Task in Clover.  
+4/3/2023 12:35:16,Task Assigned,TaskID 37636463 - Shipment Damages Report Assigned to Alex Manki
+4/3/2023 13:58:16,Email Message Received,AcmeCo Supplier Representative: Sure, Emma.  I'll get that completed now.
+4/3/2023 14:07:28,Task Completed,TaskID 37636463 - Shipment Damages Report Completed.
+Shipment tracking number: 1234567890
+Affected SKUs: ACME-001, ACME-002. 
+Photos: HJE567.PNG, HJE568.PNG, HJE569.PNG 
+Addtional Comments: It seems like the boxes were crushed or mishandled during transit.
+4/3/2023 14:07:28,Task Created,TaskID 37636439 - Damages Investigation created by TaskID 37636463
+4/3/2023 15:57:28,Email Message Sent,RetailCo Retailer Representative: Thank you for providing the information, Alex. I'll look into this issue and contact our shipping partner to find out what may have caused the damages. In the meantime we'll make sure to compensate you for the damaged products as per our agreement. I'll keep you updated on our investigation and we'll discuss any necessary changes to our shipping process. Please let me know if you have any other concerns or questions.
+4/3/2023 16:49:29,Email Message Received,AcmeCo Supplier Representative: Thanks, Emma. I'm looking forward to hearing from you with an update on this issue. Have a great day!
+4/3/2023 18:35:29,Email Message Sent,RetailCo Retailer Representative: You too, Alex! I'll be in touch soon. 
+4/4/2023 6:41:29,Private Team Message ,Emma Reinhard wrote: @Lauren Arken Can you take a look at this damages issue?  I'd like to try and get it credited in the next check run.
+4/4/2023 6:45:38,Private Team Message ,Lauren Arken wrote: Sure, Emma.  I'll take a look now.
+4/3/2023 15:59:29,Task Completed,TaskID 37636439 - Damages Investigation Completed.
+Disposition: Reimbursement Approved
+Approved By: Amy Nichols
+4/3/2023 17:24:29,Email Message Sent,RetailCo Retailer Representative: Hi again, Alex! I wanted you to know that I was able to get that credit applied in time for our next check run.  I'll follow up one more time when I see the payment confirmation come through.  In the mean time be well!
+4/19/2023,Invoice Paid,Invoice No INV-2023-12345 
+4/19/2023 1:21:00,Email Message Sent,RetailCo Retailer Representative: Hi, Alex! I hope your'e having a great day.  I wanted you to know that I am able to confirm that your last payment included a credit for the damages you reported.  Please do let me know if you have any further questions.
+4/19/2023 3:07:00,Email Message Received,AcmeCo Supplier Representative: Thanks for all your help, Emma. You guys really are great partners with us!
+4/19/2023 4:15:45,Email Message Sent,RetailCo Retailer Representative: I'm so glad we were able to get that resolved for you quickly, Alex.  We try and make sure we take good care of our supplier partners!  Be well my friend.

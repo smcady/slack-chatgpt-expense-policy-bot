@@ -1,0 +1,603 @@
+﻿A Multi-Channel Team Inbox what?
+If Clover’s got a heart, it's the Conversations module.  The Conversations Module is where, well, it’s where your conversations happen!  The Conversations module is actually a multi-channel team inbox collaboration system - a rather imposing way to describe its ability to treat email, and in the future, virtually any communication channel (think Email, Twitter, SMS, Slack, Intercom, etc), as a source of messages that collectively define the interactions between trading partners in the Clover network.  That’s the “multi-channel” part.  The team inbox part - think of that as adding the missing features of assigning emails (like tickets) and an email being either open or closed (again, kinda like tickets), and we can turn any inbox into a collaborative, team-based workspace!
+The Relationship Timeline
+The relationship timeline is a conceptual timeline of all events and communications that occur within a relationship between two companies on the Clover network.  This timeline can be thought of as the continuous stream of information that is used to train Clover’s AI.
+Messages and Conversations
+If Conversations are Clover’s heart then Messages are the chlorophyll running through its tiny little veins.  For most people, the idea of having a conversation by exchanging a series of messages is the most natural thing in the world.  It’s relatable to everyone. And it follows that we can frame most of the activities that we engage in as either having happened within or as the result of a message in a conversation.  So, they end up being the perfect thread, along which we can weave the arc of the story of a relationship between two businesses. 
+
+
+Messages
+* A message is what we call an Email on a Gmail Channel.  It’s also how we will refer to a Task - as a “message” sent on the Clover Task Channel 
+* A message will have 0 or more labels associated with it
+* Each message in a conversation should be addressable directly via a “perma-link”.  This will be used in future functionality like sharing a previous message in a conversation, with the other conversation participants.
+Conversations
+* A conversation is composed of at least one message, from a given channel.  
+* A conversation may contain multiple messages, though all messages in any conversation will always come from the same channel.  
+* A conversation may contain Private Notes, Private Team Comments, as well as messages about important events in the lifecycle of the conversation.
+* A conversation (msg or task TBD[a][b][c]) can be Assigned to a User, or it can be 'Unassigned'
+* A conversation can be "Followed" by Users.  This causes changes made to existing conversation to “bump” to the top of any view it is shown in, and the conversation is marked UNREAD (and possibly 'un-ARCHIVED'*) 
+* A conversation has a Status that can be set to any of the following values:[OPEN (default), CLOSED]
+* A User can create a New conversation to start a new email message and along with it, a new conversation.  
+* A User can create a New conversation to start a new Private Team Comment or a chat-only conversation with your team[d][e][f][g][h][i] on T2 and T3.  Remember that “Private" conversations take place among the Users at the same company
+   * User should be able to share (@mention) a conversation with anyone at their company that has a clover account.  This would have the effect of starting a conv with that person.  Take the following example:
+   * Within a team workspace, if I mention a User from my company, but not on my currently selected team workspace. As a result, that User will have the conversation shared with them,  The new conversation appears in the “Shared with me” folder the mentioned User’s private workspace
+   * Eventually we will want to be able to share outside of clover, so that this becomes a path to invite new users
+* A User can create a New “Private Note” on T1
+Channels
+Channels are how clover communicates with the outside world.  Think of channels like incoming lines of communications - Email, Texting, Slack, these are all examples of channels. In the first release of Conversations v2, we will support one channel - Gmail.  We will eventually build additional Channels to support multiple communication types like Outlook365, Intercom, SMS, Twitter, Slack, etc. 
+Gmail Channel
+The Gmail channel is the first of several planned to be supported.  Future channels may include Twitter, SMS/MMS, FaceBook Messenger, Intercom and others.  A Gmail channel is intended to be connected (we’ll call these “channel connections”) to a single gmail account.  When this connection is established, the emails, labels and contacts in that account will begin synchronizing with Clover.  Access to Gmail channel connections is planned to be a feature available to T2 and T3.
+Task Channel
+Clover’s Task management features use email messages to communicate task assignments.  In this way, Users are able to:
+* Assign and reassign tasks
+* Communicate with other users in their team or company about a task
+* View the status of a task
+* Link to the task itself
+* See the task history information
+The Clover Task Channel is available at all pricing tiers.
+Tasks 
+Tasks allow companies to request, manage and respond to requests for information for their trading partners.  Tasks can move information in both free and structured formats, between companies in either direction (providing or requesting it), in an easily auditable manner.
+In the version of Clover that is deployed at the time of this document, tasks are handled as entities that are themselves passed around the network.  Of course the UX is just a representation of the underlying entity, but in the current implementation there is no layer between the User and the task itself.  In the proposed design, this will shift slightly to passing messages that refer to tasks instead.
+
+
+
+
+  
+
+In this early working mock, we can see this with the following elements:
+
+
+We will NOT be able to use Task assignment emails for this bc users will not have connected their email accounts.  We will need to use the internal task events instead.
+This will mean we will need to filter clover task related emails from sync.
+(we will need to think about how this would leave emails on the gmail side)
+
+
+When a task assignment is created in Clover, it can be assigned to a Department or an individual.
+When a task is assigned to a department, it must first be accepted by a member of that department, before being worked
+
+
+When a Task is assigned from the “Create” new conversation / task button.  The task may be assigned to a department or an individual user at any connected company
+
+
+When a task is assigned from within another task conversation, the new task:
+https://www.figma.com/file/RxP4aMHPfcdUSJLFgz9KZkcd/Ledgerset-UI-UX-2019?node-id=17550%3A49901&t=Amc4e7tBHHYj1tjf-1 
+* will be assigned to the selected assignee or department
+* the assignee or department are added to the conversation from which the new task is assigned
+* A link is entered by the Clover bot in the conversation in which the new task is assigned,  pointing to the new task conversation.
+* A new task conversation is assigned to the assignee, containing a back-link message from the Clover bot to the conversation from which the task was assigned 
+* Conversation details header will separate users and departments visually, into the following categories:
+   * Assignee
+   * Assigner’s Company
+   * Assignee’s Company
+
+
+* The task assignment link.  This should eventually include or provide the ability to easily view:
+   1. Task Name
+   2. Task status
+   3. Task Age
+   4. A way to get to the task history view
+   5. A “View” link or button that when clicked, brings the user to the first screen of the task response wizard, from where they would need to “Accept”.  Note that this solves the problem with Department assignment nicely.  In this approach, department members would all see a copy of the task assignment, and when someone clicks the view button, then accepts the linked task, the task will become assigned to that User.  Assignment will move the message out of any Unassigned view like inbox.
+* Implement a system that does not rely on email for task assignment communication (for users without email accounts).
+* Trigger the task view generation based on internal system events.
+* Ensure that the task view is accessible and functional for users regardless of their email account status.
+* Implement a conversation details header that visually groups users as assignees, users from the assigner's company, and users from the assignee's company.
+* Manage task visibility using the same rules as conversation visibility, applying to both task conversations and email conversations.
+* Eliminate the need for a separate task view in the application, with all required views provided by the sent conversations view.
+* Determine task visibility based on direct assignee status, department membership, or @mention in the task conversation, rather than team membership.
+* Ensure that task results are only visible to assignees and not to all people in the company.
+
+
+ 
+________________
+Address Books and Contacts
+The address book allows Users to view and manage their contacts.  
+Address Book 
+* All Users will have access to an Address Book, but the contents of that address book will vary based on their license tier, team membership, channel connections
+Contacts
+* Contacts are synced from each connected gmail account’s contacts, in addition to those created during platform Signup and Invitation, and through administrative tools like Company Import.
+
+
+* Contacts from all of these sources are grouped for display into the following categories.  
+
+
+Shared Contacts
+* Default for contacts in a team inbox
+* Administered at a Team Level[j][k][l][m][n][o]
+* Available to everyone at your company
+* Listed in Company Profile Contacts section[p][q] for their associated company (we’d need to associate them to headquarters?)[r][s][t]
+* Available for use in all channels/messages in a team Inbox
+
+
+Private Contacts
+* Default for Contacts in a private inbox (My Inbox)
+* Administered at a User Level 
+* Available to only the User who created them
+* Available for use in all channels/messages in a personal Inbox
+
+
+Auto-Created
+* Administered at a User Level
+* These are partial contact records, often containing minimal information (email, name, and possibly a profile photo), that are created by Clover automatically when you receive an email from an email address that is not in your contacts
+Having access to these contacts allows Users to quickly add contacts they want to retain to their address book as shared or
+By default, automatically-created contacts are only accessible to Users that are involved in conversations with that contact. We should allow a User to add an automatically-created contact to:
+
+
+* Add to Shared contacts - add this contact to the shared contacts list in the Address book, and cause the contact to be shared with their company.
+* Add to Private contacts - create a private copy of the contact and add it to the User’s private contacts list in their Address Book. This new private contact copy will only be visible to the User that created it.
+________________
+Search
+* Global search will be modified to use a third-party search solution called Algolia
+   * Search will be federated to return matching results across multiple entities like Conversations, Companies, Products, etc. (UX is TBD)[u]
+   * Exact text matching -  Search results will only display entries that contain the exact text you enter. For instance, searching for "Pete" will yield results containing only "Pete" and not "Peter" or "Peters."
+   * Prefix search - To find an email from Sarah McDonald, enter "sar*" or "coll*" without quotes.
+   * Exact phrase search: To search for a precise phrase, enclose the text in quotation marks, e.g., "Weekly Team Update."
+   * Combining search filters: You can use multiple search filters simultaneously to refine your search results.
+   * Result ranking: The ranking of suggested search results depends on the frequency and location of the search term within key fields, such as recipient, subject, body, comments, etc. Each field carries a different weight. More recent results are assigned higher weights, as they are more likely to be relevant.
+   * Excluding Trash and Spam: By default, the Trash and Spam folders should not be included in keyword searches. 
+* Context Related Search - we will implement using a vector db like Pinecone and an embeddings model from OpenAI.  This will require near real time indexing of new data in the Relationship Timeline, so we will use something like langchain.  [v]
+
+
+Clover Bot (aka Clover)
+A “slash command” of “/Clover” followed by a natural language query[w][x][y].  When executed, returns an answer from an AI agent with access to and that has been trained on the authenticated User’s company’s data.  Aka “Relationship Timeline”
+
+
+* Available within private team comments at T2 and T3
+* We will likely be heavily promoting aspects of these capabilities to entice users at T1 to upgrade.
+
+
+Labels
+Labels allow entities in Clover to be “tagged” with a text string of your creation, providing for easier organization and retrieval of your information. Labels are User managed for Private Workspaces, and Team Workspaces, separately. 
+
+
+Team Labels
+* Available for use in all channels/conversations in a team Inbox
+* Sync’d with ALL connected gmail accounts
+* Available for use by all team members on the given team
+* Administered at a team-level by company-admin
+
+
+Private Labels
+* Available for use in all channels/conversations in a personal Inbox
+* Sync’d with the connected gmail account when available
+* Available for use only by the User who created them
+* Administered at a User Level by the given User
+
+
+* Labels may be associated with conversations, and in the future, companies, workflows, campaigns and Tasks, and possibly more.
+* Gmail also has the concept of Labels. Because Gmail uses labels internally for controlling where and how emails are displayed/categorized.  Every email that is synchronized to an inbox in Clover, will have one or more System Labels associated with it [INBOX, SPAM, TRASH, UNREAD, STARRED, IMPORTANT, SENT, DRAFT] (*Note that "ARCHIVE" is not a label.  A message is archived when it does not have any of the following tags on it [INBOX, SPAM, TRASH, UNREAD, SENT, DRAFT] according to the way Gmail operates.  
+* We can choose to extend this Gmail approach and also use these system labels to control how our various views are filtered.  
+* Note - We sync labels from gmail only if we have at least one message labeled. Nylas doesn't support webhooks for labels, so we can only track them at messages level.
+* There is a limitation on the nylas side that prevents us from being able to associate more than one label to a contact.  There is a ticket with them to resolve this, but we will not target this contact label support for initial release.
+
+
+Views
+Views are pre-configured filters that allow for easy categorization of conversations. Views make use of conversation labels, statuses and other properties to work their magic. The following views will be supported:
+
+
+* Inbox
+   * My Inbox - all conversations with the INBOX label and an OPEN status
+   * Team Inbox - all conversations with the INBOX label and an OPEN status
+      * When archiving, snoozing, or unfollowing a conversation in a User’s view of a team inbox, it should not impact other teammates in the conversation.  For example, this allows a User in a team mailbox to clear out their inbox view without archiving or snoozing, or unfollowing the conversation for other teammates.
+* Assigned to me - All Conversations that have been assigned to the current User, and are OPEN[z]
+* Shared with me - All Conversations where you have been @mentioned, and are OPEN[aa][ab][ac][ad][ae][af]
+* Starred - All Conversations with the "STARRED" label
+* Sent - All Conversations with the "SENT" label[ag][ah][ai] 
+* Drafts - All Conversations with the "DRAFT" label
+* Snoozed - All Conversations with the "SNOOZE" label
+* All - all conversations with none of the following labels [INBOX, SPAM, TRASH, UNREAD, SENT, DRAFT]
+* Spam - All Conversations with the "SPAM" label
+* Trash - All Conversations with the "TRASH" label
+* Open - conversations with an OPEN status.  
+* Closed - conversations with a CLOSED status.[aj][ak]
+
+
+* Custom views will also be supported in the future.  
+* Custom views will be defined at both a User and a Team level
+Message Templates
+Message Templates are preformatted templates that can be used to quickly create a message or reply.
+
+
+* Message Templates are available at T2 and T3[al] for both Private and Team workspaces
+* Team message templates allow Admin Users to create templates for messages in any supported Channel (gmail for now) that can be used by everyone in a Team Workspace to increase productivity
+* Message templates may eventually be made available for Channel types other than just email.  Only support for email message templates are required for initial release. - e.g. if an email channel is connected, then templates are able to be created/used for emails.  If t
+
+
+Signatures
+Signatures allow you to predefine signature blocks that are automatically inserted for messages created in channels like email (and in the future, others).
+
+
+* Signatures are available at all pricing tiers 
+
+
+* Team-level signatures are available at T2 and T3
+
+
+* Team Signatures will need to use dynamic variables to customize them based on the teammate using them.  
+
+
+________________
+Administration
+Configuration of any personal and/or team workspaces is required for all but the most basic Conversations functionality.  We will need to collect this configuration information during user onboarding, and allow it to be administered separately, via system Settings.  
+
+
+
+
+Private Workspace Administration
+Private Workspace Administration is available on all pricing tiers.  All User roles will be able to administer their own Private Workspace settings.
+
+
+1..1 Private Workspace
+0..n Message templates -Add/Remove/Edit
+
+
+0..n Signatures - Add/Remove/Edit [am][an][ao][ap][aq]
+        1..1 Inboxes        Add/Remove/Configure Inbox
+
+
+                0..n Channels (currently only Gmail) - Add/Remove/Configure Channels
+* Programmatically prevent more than one Clover User account from connecting to the same gmail account.  This would prohibit the workaround of using a shared email address, as a linked gmail account that each clover user just connects their My Inbox to.  We want to restrict this capability in the lowest price tier (no access to teams)
+* In both a private and team workspace, once you remove a channel, you can no longer send or receive with that channel, but you can still see conversations that took place on that channel prior to it being disconnected.
+        
+0..n Labels - Add/Remove/Edit Labels
+        
+0..n Custom Views - Add/Remove/Edit Custom Views
+
+
+
+
+
+
+Teams Administration
+Teams Administration is available only on T2 and T3 pricing tiers, to Users with the Company-Admin role[ar].
+
+
+0..n Team Workspaces - Add/Edit/Delete Team Workspace
+Each team has a Name
+Each team has a Color 
+0..n Message templates -Add/Remove/Edit Message Templates
+
+
+0..n Signatures - Add/Remove/Edit Team Signatures
+        
+0..n Members[as] - Add/Remove members (from User’s company)
+                 
+        0..1 Inboxes - Add/Remove/Configure Inboxes
+
+
+                0..n Channels (currently only Gmail) - Add/Remove/Configure Channels
+* Allows more than one Clover User account to connect to the same gmail account (support for group email addresses like support@acme.com)
+* In both a private and team workspace, once you remove a channel, you can no longer send or receive with that channel, but you can still see conversations that took place on that channel prior to it being disconnected.
+
+
+        
+0..n Labels - Add/Remove/Edit Labels
+        
+0..n Custom Views - Add/Remove/Edit Custom Views
+
+
+
+
+
+
+User-level Conversations Preferences Administration
+User-level Conversations Preferences Administration is available on all price tiers.  All User roles will be able to administer their own User-level Conversations settings.
+TBD
+
+
+
+
+Assignment
+Assignment allows you to ensure every message has a person responsible for it so nothing gets overlooked. 
+
+
+* Only one person can be responsible for a conversation at a time.
+
+
+* Once a conversation is assigned to someone, it shows up in their "Assigned to me" view
+
+
+* Manually assign - User with the necessary role can manually assign conversations
+
+
+* Auto-assign on first reply - Allow set up of each channel so that when a User sends the first reply in a conversation that is Unassigned, that User is automatically assigned to that conversation.  This will help to keep topics with the same people
+
+
+* Auto-assign with rules - create Rules to automatically assign conversations
+________________
+Nav Structure - Sections & Subsections
+The new Clover main navigation consists of a number of groupings of links and information.  The Conversations subsection is the default landing page for new users, replacing the dashboard and broker dashboard views entirely.  The configuration of elements of the navigation are controlled by a combination of user roles and pricing tier-specific functionality, thus we will describe the elements of the navigation, and provide examples of possible configurations.  First, let’s look at an example of a full conversations sub-nav, representing what we expect to be a common configuration:
+  
+[at]
+[au]
+
+
+
+
+Private Workspace
+Each user has a single Private Workspace that cannot be removed.  
+
+
+My Inbox - Your inbox is a consolidated view of all conversations that need your attention. 
+A conversation can be in your inbox for a number of reasons — it's assigned to you, you're @mentioned in it, or there's new activity in a conversation you're ‘following”. 
+   * My Inbox is 'already integrated' with Clover Tasks, so there is no setup/admin of this Channel's connection to 'My Inbox'.  “Clover Task Channel” (where task is open, task assignee is the current authenticated user, etc.)[av]
+   * Zero or more linked Gmail Channel Connections  (0..1 connected Gmail accounts on T1, and 0..n Gmail accounts in T2 and T3)
+      * How should Broker/CAR accounts work here?[aw]
+
+
+* In the navigation, A channel will display with an icon representing its type, and a name
+* Name will default to the connected email account for a configured gmail channel connection
+Team Workspaces
+Team Workspaces allow companies on T2 and T3 to define 0..n teams and then manage those teams individually in terms of their Inboxes, connected Channels, Members, etc.
+
+
+* Team Inboxes allow the combination of messages from 0..n Channels
+        Team Chat Groups
+        Team Chat DMs
+Example Configurations
+Here are some examples of the types of configurations we should expect in the wild.
+
+
+Tier 1 User
+* Company-User
+
+
+Tier 2 User 
+* Company-Admin        
+
+
+* Company-User
+
+
+Tier 3 User
+* Company-Admin
+        
+* Company-User
+
+
+
+
+
+
+1..1 My Inbox
+        Linked to up to one email channel
+        Typically, the User’s work email (john.doe@work.com)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FROM HERE DOWN IS IN PROGRESS 
+        
+
+
+
+
+
+
+
+
+
+
+________________
+@Mentions
+* Users can @mention a colleague or several, from inside a conversation.
+
+
+* Mention specific Userby using the @ symbol within the comments section of a conversation. This 
+* User will be notified according to their notification settings and the conversation will appear in their Shared with me section.
+
+
+* Typing the @ symbol will show the Users top 5 most commonly mentioned teammates. 
+
+
+* Users can mention everyone on your team using @all, and every teammate will be notified, and the conversation will appear in their Shared with me section. @all will only notify teammates with access to the inbox where that conversation lives.
+
+
+
+
+Notifications
+Rules
+LOW PRIORITY  - we are discussing rules so that we can anticipate its eventual development, but we will prioritize this functionality towards the bottom of the v2 (Clover v1? Like now its in 0.1?) release. 
+
+
+Rules are Automations that can be setup to run on various events.  Think “When an email arrives in INBOX AND the sender’s Company = [COMPANY], apply label ‘VIP ACCOUNT’” or more generically, “When [EVENT] execute [ACTION]”.  Where events could be things like a message label being applied or removed, a new message arriving in an inbox, an email assignment, etc.
+
+
+* Rules can be configured at Team Workspace level on T2 and T3 price tiers
+
+
+* Rules can be configured at Private Workspace level at T2 and T3 price tiers
+
+
+
+
+Analytics
+LOW PRIORITY - we are discussing Analytics so that we can anticipate its eventual development, but we will prioritize this functionality towards the bottom of the release. 
+
+
+New analytics will be developed like 
+Team Performance Reports
+CSAT reporting
+SLA Reporting 
+________________
+
+
+
+
+We are going to sort the sent folder by message sent d/t in descending order to keep newest changes at the top of the list
+
+
+
+
+
+
+
+
+
+
+________________
+
+
+Glossary
+* Channels
+* Views
+* Teams
+* Team Workspace
+* Private Workspace
+* Team Chat Groups
+* Team Chat Direct Messages (DMs)
+* Primary and Secondary CAR Accounts
+* Messages
+* Conversations
+* Labels/Tags
+* Contacts
+* Private Notes
+* Private Team Comments
+* Relationships
+* 
+
+________________
+
+
+Conversation Assignment
+Email Conversations
+
+
+Task Conversations
+* Visible to the assigner and their teammates (when 
+* Visible to the assignee and any other user it is assigned to, or visible to by way of that User’s Department association (eg the task is assigned to a department, and therefor visible to all users in that department at the time)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Next meeting --------
+
+
+Need to consider the following Task assignment Use Cases.  There is an important “TEAM TASK ASSIGNER” view here - How best to show task assignments from the assigner side, at a team-level?
+
+
+* As a Task Assigner I want to be able to assign a company task to a user or department, so I can communicate the needed information between us.
+* As a Task Assigner I want to be able to assign a product task to a User or department, so I can communicate the needed information between us.
+* As a Task Assigner I want to be able to assign a company task to a group of companies, at a user or department level for each, so I can communicate the needed information between us.
+* As a Task Assigner I want to be able to assign a product task to a group of products, to one or more companies, at User or department level, so I can communicate the needed information between us.
+* As a Task Assignee I want to be able to respond to tasks assigned to a set of my company’s products, in bulk, so that I do not have to provide individual responses for each product task assigned.
+* As a Team Task Assigner I want to be able to …
+
+
+[a]Do you have real-life examples of when we need to assign a task to a specific message instead of a conversation? Maybe we need to think about some internal tasks. For ex., we as a team receive an email and we need to do several actions on it: contact the vendor, contact our delivery team and etc. and it could be done by a different person (I don't know how it happens in the real world). I think such type of tasks will be covered by a simple mention message in the conversation :) Shawn, Sorry for so long comments:)
+[b]Sorry, Dima.  I am not sure I understand.  Do you still have this question after yesterday's conversation?
+[c]I think I am still confused by this part. When I am thinking about the conversation assignments, I imagine a ticket system. However, yesterday we only discussed the way to notify about a task assignment and how to setup a conversation about the assigned task.
+[d]Can the user create a chat-only conversation with a user from another team or company? or we can make the assumption that the user will use email conversations in this case?
+[e]User should be able to share (@mention) a conversation with anyone at their company that has a clover account, and that would have the effect of starting a conv with that person, so I think this answer is yes.  Users will be able to create a new conversation with anyone at their company who has a Clover account.
+Eventually we will want to be able to share outside of clover, so that this becomes a path to invite new users
+[f]So, for ex., this is our conversation in the team workspace. And I would mention anyone from the company but not on our team, for ex., @JoshSales.
+As a result, JoshSales will join our conversation. Am I right? 
+What happened on the JoshSales side? Does the new conversation appear in the shared folder in his private workspace?
+In addition, can I mention anyone outside the company? Or it could be possible only if the user from another company is a member of a conversation
+[g]Great questions, Dima.  Here are my thoughts inline:
+
+
+So, for ex., this is our conversation in the team workspace. And I would mention anyone from the company but not on our team, for ex., @JoshSales.
+As a result, JoshSales will join our conversation. Am I right? [Shawn] - Exactly!
+
+
+What happened on the JoshSales side? Does the new conversation appear in the shared folder in his private workspace? [Shawn] - Exactly!
+
+
+In addition, can I mention anyone outside the company? Or it could be possible only if the user from another company is a member of a conversation [Shawn] - No.  In my mind, these are all "Private" conversations among the Users at the company.
+[h]@dmitry.derepovskyi@clovercollab.com and @ludmila.nesvitiy@ledgerset.com and team, please resolve these comments or any others you feel is no longer relevant or has been resolved, as we go
+[i]As a result, JoshSales will join our conversation.
+[D] - is @JoshSales able to assign his private tag to this shared conversation potentially?
+
+
+No. In my mind, these are all "Private" conversations among the Users at the company. 
+[D] - I am not sure that I got it. Does it mean that we can mention only the contact from our company and a member of the conversation? or only a company contact? 
+In my opinion, we can add an ability to mention only members of the chat/conversation in the first release. And if the user wants to mention someone outside of the chat they should add a new member and then mention them.
+[j]Do you mean that each user in the company can update this contact?
+[k]and should we sync this info back to Gmail?
+[l]Good catch.  That's wrong. It should be "Administered at Team-level".  I would expect the company-admin to have the ability to administer the address book for a team.
+[m]should it be at Company-level? because the address book is available for everyone. 
+And probably everyone is able to use those contacts in a team or private inboxes or only the team?
+[n]Users can add auto-created contacts to their private contacts for this reason.
+[o]However, it's a team workspace. In that case, the contacts are shared by default. are they?
+[p]- those contacts could be not-associated with some user inside Clover, so I'm not sure that we need to show them in the company profile. If we still need - then need to disable options "Chat, Favorite, Assign task, etc.". Or maybe in the Company Profile COntacts we need to define several tabs, like "Clover Users", "Shared Contacts", "All Contacts", etc
+[q]agree with Ludmila, we need to understand how the LS user can interact with the synced contacts if they do not exist in the system.
+[r]do you mean our company profile or another company?
+[s]The shared contact's company profile
+[t]I see. If the system/admin associates the contact with a specific company, we will see it in this company profile details.
+And also, we can see all the shared contacts on an address book page. Is it correct?
+[u]Den to sync with Alex and FEs on components available, UX approach etc.
+[v]Team, we are already behind the curve with AI, and it is not slowing down.  If you aren't already, please start to familiarize yourself with these!
+[w]Den, doesn't have to be implemented in this way, but it feels natural to me.  Thoughts?
+[x]If we only want a "Clover BOT", then tying it to a conversation input and "slash commands" is sufficient. However, if we want a "Clover AI", it should not be limited to these inputs. A better approach would be to replicate the behavior of an AI assistant that can be called out from any place with a shortcut (e.g. Google Assistant or Lens, Siri, Alexa, Tailor AI). This approach might be more difficult to implement since the AI needs to be aware of the context, but it will provide more opportunities in the future.
+[y]Good points, Den.  I think we could evolve in that direction, but I do think the majority of the AI we will present to the user as such, will be through chat (a bot).  Search for example, will use a bunch of ai tech under the hood, and may even have some UI bling to promote it as AI, but it's just lipstick.  I'd like to embrace the idea of a bot called clover. If we end up having a need for more ways to interact with it, we can consider other ways to access then.  OK?
+[z]Assigned to me - all messages assigned to you directly (Departments?), across all inboxes that you have access to (team and private, CAR accounts?)
+[aa]Shared with me - all messages shared with you via ‘@mention, across all inboxes that you have access to (team and private, CAR accounts?)
+[ab]usually, the mentioned is a list of messages. You can check Slack or stream.io doc: https://getstream.io/chat/docs/sdk/android/ui/utility-components/mention-list-view/. Should we design it as a conversation list or message list?
+[ac]and what if we want to mention the user in not open conversation?
+[ad]Mentioning a User in a Closed conversation does not re-open, but it would be bumped in the Shared with me view of the mentioned user, and marked Unread
+[ae]I agree, Dima, about mentions being messages, but remember that a conversation only needs one message, so all messages are also conversations.  Important also, is the idea of context.  When a user is at mentioned, it is likely because there is a message or question about a message within a larger conversation, so the mentioned user not only needs to know that they were mentioned, but where, or in what context, in the larger conversation.
+[af]I think when the user clicks on the message, they should be redirected to the place inside the conversation where they were mentioned. 
+In the same way, it works in Slack.
+[ag]as I understand, the view contains all Email conversations that were initiated by me, am I right? If the user starts a Plain text (not email) conversation, we shouldn't show it here.
+[ah]Yes, that is correct
+[ai]Should it contain all conversations from all workspaces?
+[aj]we need to think about the status list. However, it will depend on the email task model (how to assign, how to process, and how to complete or close).
+[ak]agree
+[al]Team - Safe to assume that when I start talking about pricing tiers, the best way forward will be to provide a feature flag solution that would allow us to easily experiment with the tiers these features are available on.
+[am]as I see, those functionality is on the inbox level. So, if we connect several Gmail accounts each of them will have its own list of templates and signatures. Am I right?
+[an]Exactly
+[ao]"...several Gmail accounts each of them will have its own list of templates and signatures."
+
+
+but Gmail account is a channel, that's not an Inbox level 
+
+
+@shawn.cady@clovercollab.com did you mean that each CHANNEL or INBOX would have its own set of templates/signatures?
+[ap]But regardless of the answer, I would move it to the workspace level setting and add the ability to select where template/signature can be used.
+
+
+A lot easier to just update Template/Signature permissions than to maintain a few versions of it in each inbox/channel.
+[aq]Excellent idea, Den.  I'll update this and move them to workspace level.
+[ar]the admin is able to manage the workspace even if they are not a part of the team, is it correct? 
+and is only the admin able to connect/unlink a Gmail account or other to the workspace?
+[as]we assumed that team members would be workspace members.
+[at]Need to talk through Team Chat Groups and DMs.  Should we separate them like this, from other channels in the inbox?  They are presumably more optimized for instant messaging-style conversations.  To further explore this, how would we, in the future, build a Slack Channel to integrate with a company's slack instance?
+[au]I have a question regarding the Assigned to me. Are we gonna show there all assigned conversations across all workspaces?
+[av]TBD
+[aw]How to handle Broker CAR accounts vs the Primary account, for a rollup view?
