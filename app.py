@@ -12,7 +12,7 @@ from llama_index import StorageContext, load_index_from_storage
 
 os.environ["SLACK_APP_TOKEN"] = "xapp-1-A053UBJMPKQ-5149655220577-6037d6d210f4a87285b504b839fd134d3173738411e04501cf817f58c4b37a4f"
 os.environ["SLACK_BOT_TOKEN"] = "xoxb-653678788133-5130406349094-o6JT6SdV6GUgz0KfPhzutkCZ"
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 
 # Initialize Slack App with the provided bot token
 app = App(token=os.environ.get("SLACK_BOT_TOKEN"))
